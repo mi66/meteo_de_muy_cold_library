@@ -24,7 +24,7 @@ def api_main(mainual_input_full_path, output_file_folder_only_path):
         # Model of the response - to only keep needed cols
         predefined_model = conf.predefined_model
         # Api Key (usually pulled from a credentials safe, but... :)
-        api_key = conf.api_key
+        api_key = final_input['api_key']
 
         # URL of the API endpoint
         url = conf.endpoint.format(final_input['from'],final_input['to'],final_input['station'])

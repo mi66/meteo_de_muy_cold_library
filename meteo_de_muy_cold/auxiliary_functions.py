@@ -72,11 +72,13 @@ def _create_input_params(debug_mode: bool, manual_input: str):
         print(manual_selection)
     final_input = {}
     for item in manual_selection:
-        if item not in ['from','to']:
+        if item not in ['from','to', 'api_key']:
             if manual_selection[item] not in lookup_values:
                 raise Exception(f'Invalid value selected for {item}, possible values are - {allowed_values[item]}')
             else:
                 final_input[item] = lookup_values[manual_selection[item]]
+        elif item in ['api_key']:
+            final_input[item] = manual_selection[item]
         else:
             pattern = lookup_values[item]
             if not re.match(pattern, manual_selection[item]):
