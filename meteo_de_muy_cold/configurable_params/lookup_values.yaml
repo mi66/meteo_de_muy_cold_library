@@ -1,0 +1,8 @@
+Meteo Station Gabriel de Castilla: 89070
+Meteo Station Juan Carlos I: 89064
+None: 0
+Hourly: 1
+Daily: 2
+Monthly: 3
+from: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}UTC$
+to: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}UTC$
